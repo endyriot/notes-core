@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# Colores (Cyberpunk vibes)
+MORADO_NEON='\033[1;38;5;177m'
+VERDE_BICHE='\033[1;38;5;82m'
+RESET='\033[0m'
+
+# --- EFECTO DE ARRANQUE ---
+echo "Initializing System..."
+sleep 0.5
+echo "Loading Notes-Core modules..."
+sleep 0.5
+echo ""
+
+
+# --- TÍTULO ---
+echo -e "${MORADO_NEON}╔══════════════════════════════════════════════╗${RESET}"
+echo -e "${MORADO_NEON}║            [ NOTES-CORE :: V.01 ]            ║${RESET}"
+echo -e "${MORADO_NEON}╚══════════════════════════════════════════════╝${RESET}"
+echo ""
+
+# --- CONFIGURACIÓN DE RUTA ---
+# Esto hace que el script busque archivos en la misma carpeta donde vive el ejecutable
+NCORE_DIR=$(dirname "$0")
+
+# --- BUCLE DINÁMICO ---
+for archivo in "$NCORE_DIR"/*; do
+    nombre=$(basename "$archivo")
+
+    # Filtros: que sea un archivo (-f), que no sea el script ($0), ni el README
+	if [ -f "$archivo" ] && [ "$archivo" != "$0" ] && [ "$nombre" != "README.md" ] && [ "$nombre" != ".gitignore" ]; then
+        echo -e "${VERDE_BICHE}[>>] $nombre${RESET}"
+        cat "$archivo"
+        echo ""
+    fi
+done
+
+
+echo -e "${MORADO_NEON}╚══════════════════════════════════════════════╝${RESET}"
+
+
+
