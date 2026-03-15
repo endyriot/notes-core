@@ -1,6 +1,6 @@
 # NCORE (Notes-Core)
 
-A lightweight, fast, and stylish **Cyberpunk-themed** note management system for your terminal. Designed for those who want to keep their workflow clean, organized, and looking incredible.
+It is a simple note management system for your terminal. Designed for those who want to keep their workflow clean, organized, and looking incredible.
 
 ## Features
 - **Cyberpunk Aesthetic:** Neon color-coded output with custom window framing.
