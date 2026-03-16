@@ -1,6 +1,6 @@
 # NCORE (Notes-Core)
 
-It is a simple note management system for your terminal. Designed for those who want to keep their workflow clean, organized, and looking incredible.
+It is a simple note management system for your terminal.
 
 ## Features
 - **Cyberpunk Aesthetic:** Neon color-coded output with custom window framing.
@@ -11,5 +11,13 @@ It is a simple note management system for your terminal. Designed for those who 
 
 1. **Clone the repository:**
    ```bash
-   git clone git@github.com:endyriot/notes-core.git
+   git clone [https://github.com/endyriot/notes-core.git](https://github.com/endyriot/notes-core.git)
    cd notes-core
+   ```
+2. Run the automatic installer:
+
+   ```bash
+   chmod +x setup.sh
+   ./setup.sh
+   ```
+
