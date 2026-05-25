@@ -11,7 +11,7 @@ It is a simple note management system for your terminal.
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/endyriot/notes-core.git](https://github.com/endyriot/notes-core.git)
+   git clone "https://github.com/endyriot/notes-core.git"
    cd notes-core
    ```
 2. Run the automatic installer:
