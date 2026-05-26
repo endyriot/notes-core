@@ -20,21 +20,20 @@ echo -e "${MORADO_NEON}╚══════════════════
 echo ""
 
 # --- CONFIGURACIÓN DE RUTA ---
-# Esto hace que el script busque archivos en la misma carpeta donde vive el ejecutable
-NCORE_DIR=$(dirname "$0")
+# Apunta directamente a tu carpeta de notas en tu directorio de usuario
+NCORE_DIR="$HOME/notes-core"
 
 # --- BUCLE DINÁMICO ---
 for archivo in "$NCORE_DIR"/*; do
     nombre=$(basename "$archivo")
 
-    # Filtros: que sea un archivo (-f), que no sea el script ($0), ni el README
-	if [ -f "$archivo" ] && [ "$archivo" != "$0" ] && [ "$nombre" != "README.md" ] && [ "$nombre" != ".gitignore" ]; then
+    # Filtros: que sea un archivo y que ignore ejecutables, instaladores y documentación
+    if [ -f "$archivo" ] && [ "$nombre" != "ncore" ] && [ "$nombre" != "setup.sh" ] && [ "$nombre" != "README.md" ] && [ "$nombre" != ".gitignore" ]; then
         echo -e "${VERDE_BICHE}[>>] $nombre${RESET}"
         cat "$archivo"
         echo ""
     fi
 done
-
 
 echo -e "${MORADO_NEON}╚══════════════════════════════════════════════╝${RESET}"
 
