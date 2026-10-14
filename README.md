@@ -3,9 +3,8 @@
 It is a simple note management system for your terminal.
 
 ## Features
-- **Cyberpunk Aesthetic:** Neon color-coded output with custom window framing.
-- **Fast Access:** Instant overview of all your notes and scripts.
-- **Easy Integration:** Use it as a quick index to launch your favorite editors.
+- Neon color-coded output with custom window framing.
+- Instant overview of all your notes and scripts.
 
 ## Installation
 
